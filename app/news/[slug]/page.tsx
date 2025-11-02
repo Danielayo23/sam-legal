@@ -7,7 +7,6 @@ import { client } from "@/sanity/lib/client";
 
 export const revalidate = 60;
 
-// ✅ Define the structure of a News item
 type NewsItem = {
   _id: string;
   title: string;
@@ -20,15 +19,14 @@ type NewsItem = {
   };
 };
 
-
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function NewsArticlePage({ params }: Props) {
-  const news = await getNews(params.slug);
+// ✅ Next.js expects params to be async compatible
+export default async function NewsArticlePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params; // ✅ Await params (fixes the constraint error)
+  const news = await getNews(slug);
 
   if (!news) {
     notFound();
@@ -36,7 +34,6 @@ export default async function NewsArticlePage({ params }: Props) {
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-     
       {news.mainImage?.asset?.url && (
         <div className="relative w-full h-80 rounded-2xl overflow-hidden mb-8">
           <Image
@@ -49,13 +46,11 @@ export default async function NewsArticlePage({ params }: Props) {
         </div>
       )}
 
-    
       <h1 className="text-3xl font-bold text-gray-900">{news.title}</h1>
       <p className="text-gray-500 text-sm mt-2">
         {new Date(news._createdAt).toLocaleDateString()}
       </p>
 
-    
       <div className="mt-6 prose prose-lg prose-blue max-w-none">
         <PortableText value={news.body} />
       </div>
@@ -63,7 +58,7 @@ export default async function NewsArticlePage({ params }: Props) {
   );
 }
 
-// Fetch a single news item by slug
+// ✅ Fetch single news post
 async function getNews(slug: string): Promise<NewsItem | null> {
   const query = `*[_type == "news" && slug.current == $slug][0]{
     _id,
