@@ -62,8 +62,8 @@ export default function AboutUs() {
           <div className="md:w-1/2 space-y-6">
             <h2 className="text-3xl font-semibold">Our Mission</h2>
             <p className="text-gray-700">
-              We’ve had a lot of changes in fifty years and now we are seen as a dynamic and more progressive law firm. 
-              We’ve got some of the most experienced, qualified and dedicated legal practitioners in the region, all of 
+              We&apos;ve had a lot of changes in fifty years and now we are seen as a dynamic and more progressive law firm. 
+              We&apos;ve got some of the most experienced, qualified and dedicated legal practitioners in the region, all of 
               whom are committed to getting you the best results.
             </p>
           </div>
