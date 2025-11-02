@@ -34,7 +34,7 @@ export default function ResidentialProperty() {
                  </div>
         <h2 className="text-3xl  mb-4">Residential Property & Conveyancing Solicitors</h2>
         <p className="text-gray-600 leading-relaxed">
-          Whether you're looking to buy your first home, upgrade, or invest
+          Whether you&apos;re looking to buy your first home, upgrade, or invest
           in rental properties, we provide tailored solutions that make your
           journey stress-free and rewarding.
         </p>
