@@ -3,11 +3,12 @@ import { PortableText } from "@portabletext/react";
 import Hero from "./Hero";
 import Link from "next/link";
 import Image from "next/image";
+import { PortableTextBlock } from "sanity";
 
 type NewsItem = {
   _id: string;
   title: string;
-  body: any;
+  body: PortableTextBlock[];
   slug: string;
   _createdAt: string;
   mainimage?: {
@@ -16,6 +17,7 @@ type NewsItem = {
     };
   };
 };
+
 
 export default function News({ items }: { items: NewsItem[] }) {
   return (

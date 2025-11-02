@@ -50,8 +50,8 @@ export default function AboutUs() {
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold mb-6">About SAM Legal</h1>
           <p className="text-lg text-gray-700">
-            Since SAM LEGAL's was set up in 1967 we’ve grown to become one of the top law firms in Herts Beds and Bucks. 
-            Over the past five decades we’ve established a great reputation as not only one of the best law firms to 
+            Since SAM LEGAL's was set up in 1967 we have grown to become one of the top law firms in Herts Beds and Bucks. 
+            Over the past five decades we have established a great reputation as not only one of the best law firms to 
             deal with, we have also ensured that our very personal and sensitive approach to doing business has meant 
             that our clients feel cared for and confident that they can trust us to achieve the outcomes they want.
           </p>
@@ -62,8 +62,8 @@ export default function AboutUs() {
           <div className="md:w-1/2 space-y-6">
             <h2 className="text-3xl font-semibold">Our Mission</h2>
             <p className="text-gray-700">
-              We&apos;ve had a lot of changes in fifty years and now we are seen as a dynamic and more progressive law firm. 
-              We&apos;ve got some of the most experienced, qualified and dedicated legal practitioners in the region, all of 
+              We have had a lot of changes in fifty years and now we are seen as a dynamic and more progressive law firm. 
+              We have got some of the most experienced, qualified and dedicated legal practitioners in the region, all of 
               whom are committed to getting you the best results.
             </p>
           </div>
